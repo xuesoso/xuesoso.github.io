@@ -1,2 +1,2 @@
-# ysx.github.io
+# xuesoso.github.io
 Personal website for Soso Xue
