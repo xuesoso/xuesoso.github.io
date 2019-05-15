@@ -3,7 +3,7 @@ layout: default
 title: Personal webpage for Yuan Xue (Soso)
 ---
 
-## Yuan Xue (YSX)
+## Yuan Soso Xue (YSX)
 
 Hello! I am a PhD student in the Bioengineering program at Stanford University
 
