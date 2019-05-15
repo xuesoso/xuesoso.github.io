@@ -1,3 +1,7 @@
+---
+title: CV
+---
+
 #### My CV
 
 <iframe
