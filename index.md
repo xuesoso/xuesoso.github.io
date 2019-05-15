@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Personal webpage for Yuan Xue (Soso)
 ---
 
