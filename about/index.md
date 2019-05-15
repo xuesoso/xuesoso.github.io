@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: About me
-subtitle: To be built
 ---
 
 My name is Yuan Xue (Soso).
