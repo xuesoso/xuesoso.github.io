@@ -7,9 +7,13 @@ title: Personal webpage for Yuan Xue (Soso)
 
 ## Hello! I am a PhD student in the Bioengineering program at Stanford University
 
-I apply nucleic acids sequencing and machine learning (and sometimes biochemistry) to deepen our understanding of biology. My current research interests range from extremophilic enzymes, germ line development, to parasitism. 
+I apply nucleic acids sequencing and machine learning (and sometimes biochemistry) to deepen our understanding of biology.
 
-My background is available on the following sites:
+Recently, I applied single-cell RNA sequencing to reveal the sexual development of [parasitic worm](https://www.biorxiv.org/content/10.1101/364166v1) and the asexual development of a [brain-inhabiting single-celled parasite](https://www.biorxiv.org/content/10.1101/656165v1.article-metrics).
+
+For more information about me:
+
+<span style="color:blue">[My CV](xuesoso.github.io/cv)</span>
 
 <span style="color:blue">[Google scholar](https://scholar.google.com/citations?user=HJLgA2kAAAAJ&hl=en)</span>
 
