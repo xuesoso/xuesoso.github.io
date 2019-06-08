@@ -7,7 +7,11 @@ Yuan Soso Xue (YSX)
 
 #### Hello! I am a PhD student in the Bioengineering program at Stanford University
 
-#### I apply nucleic acids sequencing and machine learning to deepen our understanding of biology. My current research interests range from extremophilic enzymes, germ line development, to parasitism. 
+I apply nucleic acids sequencing and machine learning (and sometimes biochemistry) to deepen our understanding of biology. My current research interests range from extremophilic enzymes, germ line development, to parasitism. 
 
-##### There will be more contents on this page soon ...
+My academic background is available on the following sites:
+
+[Google scholar](https://scholar.google.com/citations?user=HJLgA2kAAAAJ&hl=en)
+
+[Linkedin](https://www.linkedin.com/in/yuan-xue-8b1b254a)
 
