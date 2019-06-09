@@ -3,10 +3,10 @@ layout: default
 title: Personal webpage for Yuan Xue (Soso)
 ---
 
-<h1>Yuan Soso Xue (YSX)</h1>
+<!--<h1>Yuan Soso Xue (YSX)</h1>-->
 
 
-<subtitle>Single-cell bioinformatics. Biochemistry. Machine learning.</subtitle>
+<!--<subtitle>Single-cell bioinformatics. Biochemistry. Machine learning.</subtitle>-->
 
 
 I am a Bioengineering PhD candidate in the [Quake lab](https://quakelab.stanford.edu/) at Stanford University. I am currrently interested in applying nucleic acids measurement and analysis to deepen our understanding of biological systems.
