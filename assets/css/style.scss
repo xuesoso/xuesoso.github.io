@@ -3,3 +3,67 @@
 
 @import "{{ site.theme }}";
 @import url("http://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.css");
+
+body {
+    margin: 20px auto;
+    width: 70%;
+    font-family:"Helvetica";
+    font-size: 1em;
+}
+subtitle{
+    margin: 100px auto;
+    font-family:"Verdana";
+    font-size: 1.2em;
+}
+nav ul, footer ul {
+    font-family:"Helvetica";
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    padding: 0px;
+    color: #8C1515;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 2.5em;
+    font-family:"Helvetica";
+    padding: 0px;
+    margin-bottom: 0px;
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 1em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+.left {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+.right {
+    float: right;
+    padding: 0 20px 20px 0;
+}
+
