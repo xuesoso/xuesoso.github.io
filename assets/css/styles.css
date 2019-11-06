@@ -28,6 +28,7 @@ a {
     padding: 0px;
     color: #8C1515;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -68,4 +69,8 @@ ul.posts li {
 
 header {
     border-bottom: 1px solid #d5d5d5;
+}
+
+.circular--square {
+  border-radius: 50%;
 }
