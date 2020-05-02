@@ -1,60 +1,31 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
-    <img class='circular--square' src="/images/yuanxue_cropped.jpg" alt="" align="right" height=120 width=120/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142313363-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-142313363-1');
-    </script>
-
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/styles.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    {% include head.html %}
+    {% include head/custom.html %}
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-            <img src="{{site.logo | relative_url}}" alt="Logo" align="right" height=150 width=150/>
-        {% endif %}
 
-        <subtitle>{{ site.description | default: site.github.project_tagline }}</subtitle>
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
-        <nav>
-            <ul>
-                <li><a href="/">About me</a></li>
-                <li><a href="/blog">Blogs</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/project">Research projects</a></li>
-            </ul>
-        </nav>
+    {{ content }}
 
-      </header>
-      <section>
-
-      {{ content }}
-
-      </section>
+    <div class="page__footer">
       <footer>
-            <ul>
-                <li><a href="mailto:yuanxue@stanford.edh"><img src="/assets/images/email_50.png" alt="Email" height="28" width="28"></a></li>
-                <li><a href="https://github.com/xuesoso"><img src="/assets/images/git-mark_96.png" alt="Github" height="32" width="32"></a></li>
-                <li><a href="https://www.linkedin.com/in/yuan-xue-8b1b254a"><img src="/assets/images/linkedin_50.png" alt="Linkedin" height="32" width="32"></a></li>
-            </ul>
+        {% include footer/custom.html %}
+        {% include footer.html %}
       </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+    {% include scripts.html %}
+
   </body>
 </html>

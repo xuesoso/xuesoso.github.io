@@ -1,9 +1,5 @@
----
-title: CV
----
-
-#### My CV
+[My CV](cv.pdf)
 
 <iframe
-src="cv.pdf" width="1200" height="1200" scrolling="yes">
+src="cv.pdf" width="1000" height="1000" scrolling="yes">
 </iframe>
