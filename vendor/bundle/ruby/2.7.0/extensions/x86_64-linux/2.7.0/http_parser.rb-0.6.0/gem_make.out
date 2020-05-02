@@ -1,0 +1,16 @@
+current directory: /home/xuesoso/GitRepositories/academicpages.github.io/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/usr/bin/ruby -I /usr/lib/ruby/2.7.0 -r ./siteconf20200501-2809230-1j9oio4.rb extconf.rb
+creating Makefile
+
+current directory: /home/xuesoso/GitRepositories/academicpages.github.io/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /home/xuesoso/GitRepositories/academicpages.github.io/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/xuesoso/GitRepositories/academicpages.github.io/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20200501-2809230-1xp4lcq
