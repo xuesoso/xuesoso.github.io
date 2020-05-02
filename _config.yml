@@ -84,9 +84,9 @@ author:
   name             : "Yuan Xue (Soso)"
   avatar           : "yuanxue_cropped.jpg"
   bio              : "Single-cell data science
-                      infectious disease
-                      unix
-                      vim"
+                      + infectious disease
+                      + unix
+                      + vim"
   location         : "Palo Alto, California"
   employer         : 
   pubmed           : 
