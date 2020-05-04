@@ -12,4 +12,4 @@ I am a Bioengineering PhD candidate in the [Quake lab](https://quakelab.stanford
 
 Recently, my work resolved the sexual development of single cells in a [parasitic worm](https://elifesciences.org/articles/48994) and the asexual development of a [brain-dwelling single-celled parasite](https://github.com/xuesoso/singleToxoplasmaSeq).
 
-If you are interested in connecting, please feel free to reach out to [my email](yuanxue@stanford.edu). 
+If you are interested in connecting, please feel free to reach out to [my email](mailto:yuanxue@stanford.edu). 
