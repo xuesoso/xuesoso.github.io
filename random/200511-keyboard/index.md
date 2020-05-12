@@ -11,7 +11,7 @@ Like most people that work with a computer, I do a lot of typing in a day. Previ
 
 3. **[Surgery](https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/carpal-tunnel-release)** - *Wow, I did not know this exists, and no thank you.*
 
-4. **Get a more ergonomic keyboard** - *Accceptable*
+4. **Get a more ergonomic keyboard** - *Acceptable*
 
 So what makes for a more ergonomic keyboard? And what other properties do I want in a keyboard? These are questions I did not think deeply about prior to my "Carpal trouble". For improved ergonomics, I wanted a keyboard where my wrist does not have to travel around all the time. I read up that there are a variety of ergonomically-designed keyboards (e.g. split keyboard), but they are either too expensive, take up too much space on my desk, or don't have wireless capability. So, I decided to look for a keyboard with a more compact form factor and bigger keycaps. Lastly, having typed on a mechanical keyboard (with blue switches) at work that rapidly eroded my labmates' sanity, I wanted one that is close to dead silent. This is espcially relevant now when I have to work from home with my SO. 
 
@@ -79,4 +79,4 @@ I actually typed slower on the more comfortable, electro-capacitive keyboard! In
 
 **3. Better typing comfort level does not translate into better typing performance.**
 
-Although I may be trading in ~5-6 words per minute for using a more comfortable keyboard, my productivity is rate-limited by the speed at which I think or read (yeah I am a dummy), so this is totally acceptable. I probably will get better at typing with the new keyboard over time. Maybe I will do another test in the future to measure if there is any improvement.
+Although I may be trading in ~5-6 words per minute for using a more comfortable keyboard, my productivity is rate-limited by the speed at which I think or read (yeah I am a dummy), so this is totally acceptable. If there are typos in this post, it is definitely the keyboard's fault. I hope to get better at typing with the new keyboard over time. Maybe I will do another test in the future to measure if there is any improvement. 
