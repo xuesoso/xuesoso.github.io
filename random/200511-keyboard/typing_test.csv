@@ -1,0 +1,31 @@
+Subject,Trial,WPM,Accuracy (%),Right/Wrong,Keyboard
+YSX,1,84,91,62/3,AmazonBasics
+YSX,2,94,97,70/0,AmazonBasics
+YSX,3,93,95,68/1,AmazonBasics
+YSX,4,104,97,77/1,AmazonBasics
+YSX,5,96,94,74/1,AmazonBasics
+YSX,1,86,89,65/3,NiZ Plum 66
+YSX,2,86,92,63/3,NiZ Plum 66
+YSX,3,88,89,64/2,NiZ Plum 66
+YSX,4,91,90,71/4,NiZ Plum 66
+YSX,5,88,88,65/3,NiZ Plum 66
+YSX,1,95,94,73/2,MBP 13
+YSX,2,82,89,61/4,MBP 13
+YSX,3,91,90,68/5,MBP 13
+YSX,4,86,88,64/5,MBP 13
+YSX,5,93,90,72/4,MBP 13
+SS,1,64,91,50/3,AmazonBasics
+SS,2,69,92,52/1,AmazonBasics
+SS,3,70,92,54/3,AmazonBasics
+SS,4,79,97,60/1,AmazonBasics
+SS,5,79,95,62/2,AmazonBasics
+SS,1,68,91,48/4,NiZ Plum 66
+SS,2,65,91,51/1,NiZ Plum 66
+SS,3,68,93,53/2,NiZ Plum 66
+SS,4,68,93,46/2,NiZ Plum 66
+SS,5,66,91,46/3,NiZ Plum 66
+SS,1,76,96,59/1,MBP 13
+SS,2,81,94,61/2,MBP 13
+SS,3,80,96,57/1,MBP 13
+SS,4,76,91,53/4,MBP 13
+SS,5,80,94,60/2,MBP 13
