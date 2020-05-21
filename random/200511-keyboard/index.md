@@ -1,6 +1,7 @@
 ---
 title: "Does keyboard matter?"
 author_profile: true
+date: "2020-05-11"
 ---
 
 Like most people that work with a computer, I do a lot of typing in a day. Previously, I had typed with the Toyota Camry of keyboards at home, an AmazonBasics keyboard. It is boring but *does-exactly-what-it-is-for*, and your wallet thanks you for it. One day, after hours of typing during my work from home, I experienced a sensation of sharp pain traveling down my hand between the thumb and index finger. It felt like an angry crab pinching you in the palm. Not that I would know why a crab gets mad, but that's when I learned about [Carpal tunnel syndrome](https://en.wikipedia.org/wiki/Carpal_tunnel_syndrome). Biting down a (chop)stick, I searched for ways to mitigate this problem. Here is what I found:
