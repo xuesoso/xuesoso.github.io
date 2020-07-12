@@ -1,1 +1,1 @@
-More contents soon.
+More contents coming soon.
