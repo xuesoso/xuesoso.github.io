@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2020-Differential Impacts on Host Transcription by ROP and GRA Effectors from the Intracellular Parasite Toxoplasma gondii
 year: 2020
 venue: 'mBio'
-paperurl: 'https://www.biorxiv.org/content/10.1101/2020.02.04.934570v2.abstract'
-citation: 'Suchita Rastogi, Yuan Xue, Stephen R. Quake, John C. Boothroyd. mBio (2020). Differential Impacts on Host Transcription by ROP and GRA Effectors from the Intracellular Parasite Toxoplasma gondii.'
+paperurl: 'https://mbio.asm.org/content/11/3/e00182-20'
+citation: 'Suchita Rastogi, <b>Yuan Xue</b>, Stephen R. Quake, John C. Boothroyd.'
 ---
-[Article available here](https://www.biorxiv.org/content/10.1101/2020.02.04.934570v2.abstract)
+[Article available here](https://mbio.asm.org/content/11/3/e00182-20)

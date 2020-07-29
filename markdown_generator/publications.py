@@ -39,6 +39,7 @@ import numpy as np
 
 
 publications = pd.read_csv("publications.csv", sep=",", header=0)
+myname = 'Yuan Xue'
 publications
 
 
@@ -96,7 +97,7 @@ for row, item in publications.iterrows():
     if len(split_paper_url) > 1:
         md += "\nbiorxiv_url: '" + split_paper_url[-1] + "'"
 
-    md += "\ncitation: '" + html_escape(item.citation) + "'"
+    md += "\ncitation: '" + html_escape(item.citation).replace(myname, '<b>'+myname+'</b>')+"'"
 
     md += "\n---"
 
