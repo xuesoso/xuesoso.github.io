@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20200501-2809230-1p4wbow
-sitelibdir = $(DESTDIR)./.gem.20200501-2809230-1p4wbow
+sitearchdir = $(DESTDIR)./.gem.20200728-93777-1nhte2i
+sitelibdir = $(DESTDIR)./.gem.20200728-93777-1nhte2i
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -85,7 +85,7 @@ warnflags =
 cppflags = 
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/lib/libffi-3.2.1/include
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
 DEFS     = 
 CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -D_FORTIFY_SOURCE=2 $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt  $(ARCH_FLAG)
@@ -141,7 +141,7 @@ LIBS = $(LIBRUBYARG_SHARED) -lffi  -lffi -lm   -lc
 ORIG_SRCS = AbstractMemory.c ArrayType.c Buffer.c Call.c ClosurePool.c DynamicLibrary.c Function.c FunctionInfo.c LastError.c LongDouble.c MappedType.c MemoryPointer.c MethodHandle.c Platform.c Pointer.c Struct.c StructByValue.c StructLayout.c Thread.c Type.c Types.c Variadic.c ffi.c
 SRCS = $(ORIG_SRCS) 
 OBJS = AbstractMemory.o ArrayType.o Buffer.o Call.o ClosurePool.o DynamicLibrary.o Function.o FunctionInfo.o LastError.o LongDouble.o MappedType.o MemoryPointer.o MethodHandle.o Platform.o Pointer.o Struct.o StructByValue.o StructLayout.o Thread.o Type.o Types.o Variadic.o ffi.o
-HDRS = $(srcdir)/MemoryPointer.h $(srcdir)/Thread.h $(srcdir)/rbffi_endian.h $(srcdir)/rbffi.h $(srcdir)/ArrayType.h $(srcdir)/Call.h $(srcdir)/ClosurePool.h $(srcdir)/Pointer.h $(srcdir)/AbstractMemory.h $(srcdir)/MappedType.h $(srcdir)/compat.h $(srcdir)/Struct.h $(srcdir)/LongDouble.h $(srcdir)/Types.h $(srcdir)/StructByValue.h $(srcdir)/Type.h $(srcdir)/Platform.h $(srcdir)/DynamicLibrary.h $(srcdir)/Function.h $(srcdir)/MethodHandle.h $(srcdir)/LastError.h $(srcdir)/extconf.h
+HDRS = $(srcdir)/extconf.h $(srcdir)/StructByValue.h $(srcdir)/AbstractMemory.h $(srcdir)/LongDouble.h $(srcdir)/Function.h $(srcdir)/MethodHandle.h $(srcdir)/Platform.h $(srcdir)/MemoryPointer.h $(srcdir)/ArrayType.h $(srcdir)/DynamicLibrary.h $(srcdir)/compat.h $(srcdir)/Types.h $(srcdir)/Type.h $(srcdir)/rbffi_endian.h $(srcdir)/LastError.h $(srcdir)/ClosurePool.h $(srcdir)/Call.h $(srcdir)/Pointer.h $(srcdir)/Thread.h $(srcdir)/MappedType.h $(srcdir)/rbffi.h $(srcdir)/Struct.h
 LOCAL_HDRS = 
 TARGET = ffi_c
 TARGET_NAME = ffi_c
