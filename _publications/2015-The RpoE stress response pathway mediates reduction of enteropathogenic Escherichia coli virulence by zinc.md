@@ -6,5 +6,6 @@ year: 2015
 venue: 'Applied and Environmental Microbiology'
 paperurl: 'https://aem.asm.org/content/81/11/3766/article-info'
 citation: '<b>Yuan Xue</b>, Jossef Osborn, Anand Panchal, Jay L. Mellies.'
+image: 2015_AEM_YX.png
 ---
 [Article available here](https://aem.asm.org/content/81/11/3766/article-info)

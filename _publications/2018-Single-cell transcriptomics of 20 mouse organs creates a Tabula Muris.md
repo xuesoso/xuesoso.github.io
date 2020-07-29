@@ -7,6 +7,7 @@ venue: 'Nature'
 paperurl: 'https://www.nature.com/articles/s41586-018-0590-4'
 biorxiv_url: 'https://www.biorxiv.org/content/10.1101/237446v2'
 citation: 'The Tabula Muris Consortium, Stephen R. Quake, Tony Wyss-Coray, Spyros Darmanis.'
+image: 2018_Nature_TabulaMuris.png
 ---
 [Article available here](https://www.nature.com/articles/s41586-018-0590-4)
 

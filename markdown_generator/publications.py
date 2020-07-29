@@ -27,6 +27,7 @@
 
 import pandas as pd
 import numpy as np
+import os, glob
 
 
 # ## Import TSV
@@ -67,8 +68,11 @@ def html_escape(text):
 
 # In[14]:
 
+if 'publications' in os.listdir('../images/'):
+    existing_images = [x.split('/')[-1] for x in glob.glob('../images/publications/*.png')]
+else:
+    existing_images = []
 
-import os
 for row, item in publications.iterrows():
 
     md_filename = str(item.pub_date) + "-" + item.url_slug + ".md"
@@ -98,6 +102,11 @@ for row, item in publications.iterrows():
         md += "\nbiorxiv_url: '" + split_paper_url[-1] + "'"
 
     md += "\ncitation: '" + html_escape(item.citation).replace(myname, '<b>'+myname+'</b>')+"'"
+
+    if str(item.image) in existing_images:
+        md += "\nimage: " + str(item.image)
+    # else:
+        # md += "\nimage: ''"
 
     md += "\n---"
 
