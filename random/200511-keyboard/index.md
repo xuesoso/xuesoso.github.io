@@ -60,17 +60,17 @@ To answer the first question, I made a audio recording of typing on three differ
 
 That's pretty qualitative. We can quantify amplitude of the typing sound using a bit of python magic.
 
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./bootstrap_loudness.html" height="500" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./bootstrap_loudness.html" height="500" max-width="100%"></iframe>
 
 I bootstrapped the 10 second clip to obtain an estimate of the loudness for each keyboard. It seems electro-capacitive keyboard produces typing sound that is right between the Macbook Pro butterfly keyboard, one that uses scissor mechanism and is expectedly the quietest keyboard (our positive control, so to speak), and our AmazonBasics keyboard, which uses membrane mechanism without moving components. I am quite surprised that the electro-capacitive keyboard makes even less sound than the membrane keyboard, as it does contain a few more moving parts. So yes, the NiZ Plum is noticeably quieter than a regular keyboard, and is definitely more quiet in comparison to most mechanical keyboards.
 
 To address the second question, I conducted a [typing speed test](https://10fastfingers.com/advanced-typing-test/english) to record the average typed words per minute (WPM) and acurracy for each keyboard over 5 trials. Thanks to Sabrina Sok (SS) for volunteering as a "biological replicate". Here are the results:
 
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./typing_test.html" height="500" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./typing_test.html" height="500" max-width="100%"></iframe>
 
 I actually typed slower on the more comfortable, electro-capacitive keyboard! Inclusion of a second subject, who probably wished that I didn't spend the money on a new keyboard even though she agrees it's the more comfortable keyboard, also shows that comfort level does not necessarily lead to better typing performance. This concurs with my experience as I noticed the smaller key spacing and very light actuation force required (45 newton) led to many accidental key presses when I had to type in rapid succession. We can also see quite clearly that when we are able to type fast, our accuracy also tends to be high. Anecdotally, I noticed that when I am typing slow, it was because I was backspacing to correct typos that I made.
 
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./typing_test_correlation.html" height="500" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="./typing_test_correlation.html" height="500" max-width="100%"></iframe>
 
 **In summary:**
 
