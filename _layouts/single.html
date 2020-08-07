@@ -41,20 +41,30 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        
              
-        {% if page.citation and page.paperurl %}
-          <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
+        {% if page.citation and page.year and page.venue%}
+        <p>{{ page.citation }}. <b>{{ page.venue }} ({{ page.year }})</b> </p>
         {% elsif page.citation %}
-          <p>Recommended citation: {{ page.citation }} </p>
+          <p>{{ page.citation }} </p>
         {% endif %}
-    
+   
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+
+        {% if page.image %}
+            <div style="height: 250px">
+                 <img src="/images/publications/{{ page.image }}" alt=" " style="max-width: 100%;max-height: 100%" />
+            </div>
+        {% endif %}
+
+        {% if page.abstract %}
+          <p>{{ page.abstract }} </p>
+        {% endif %}
+ 
       </section>
 
       <footer class="page__meta">
