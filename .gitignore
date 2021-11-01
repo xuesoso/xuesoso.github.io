@@ -1,2 +1,3 @@
-_backup_index.html
-_site/
+_site
+.sass-cache
+.jekyll-metadata

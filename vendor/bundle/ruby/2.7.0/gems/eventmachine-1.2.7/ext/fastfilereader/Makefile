@@ -2,7 +2,7 @@
 SHELL = /bin/sh
 
 # V=0 quiet, V=1 verbose.  other values don't work.
-V = 0
+V = 1
 Q1 = $(V:1=)
 Q = $(Q1:0=@)
 ECHO1 = $(V:1=@ :)
@@ -12,54 +12,55 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/include/ruby-2.7.0
+topdir = /usr/include
 hdrdir = $(topdir)
-arch_hdrdir = /usr/include/ruby-2.7.0/x86_64-linux
+arch_hdrdir = /usr/include
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/usr
-rubysitearchprefix = $(rubylibprefix)/$(sitearch)
-rubyarchprefix = $(rubylibprefix)/$(arch)
-rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
-exec_prefix = $(prefix)
-vendorarchhdrdir = $(vendorhdrdir)/$(sitearch)
-sitearchhdrdir = $(sitehdrdir)/$(sitearch)
-rubyarchhdrdir = $(rubyhdrdir)/$(arch)
+rubysitearchprefix = $(sitearchlibdir)/$(RUBY_BASE_NAME)
+rubyarchprefix = $(DESTDIR)/usr/lib64/ruby
+rubylibprefix = $(exec_prefix)/share/ruby
+exec_prefix = $(DESTDIR)/usr
+vendorarchhdrdir = $(vendorhdrdir)/$(arch)
+sitearchhdrdir = $(sitehdrdir)/$(arch)
+rubyarchhdrdir = $(DESTDIR)/usr/include
 vendorhdrdir = $(rubyhdrdir)/vendor_ruby
 sitehdrdir = $(rubyhdrdir)/site_ruby
-rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
-vendorarchdir = $(vendorlibdir)/$(sitearch)
-vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20200728-93777-ial6pe
-sitelibdir = $(DESTDIR)./.gem.20200728-93777-ial6pe
-sitedir = $(rubylibprefix)/site_ruby
-rubyarchdir = $(rubylibdir)/$(arch)
-rubylibdir = $(rubylibprefix)/$(ruby_version)
+rubyhdrdir = $(DESTDIR)/usr/include
+rubygemsdir = $(DESTDIR)/usr/share/rubygems
+vendorarchdir = $(DESTDIR)/usr/lib64/ruby/vendor_ruby
+vendorlibdir = $(vendordir)
+vendordir = $(DESTDIR)/usr/share/ruby/vendor_ruby
+sitearchdir = $(DESTDIR)./.gem.20211101-154395-wax4yf
+sitelibdir = $(DESTDIR)./.gem.20211101-154395-wax4yf
+sitedir = $(DESTDIR)/usr/local/share/ruby/site_ruby
+rubyarchdir = $(rubyarchprefix)
+rubylibdir = $(rubylibprefix)
 sitearchincludedir = $(includedir)/$(sitearch)
 archincludedir = $(includedir)/$(arch)
 sitearchlibdir = $(libdir)/$(sitearch)
-archlibdir = $(libdir)/$(arch)
+archlibdir = $(DESTDIR)/usr/lib64
 ridir = $(datarootdir)/$(RI_BASE_NAME)
-mandir = $(datarootdir)/man
+mandir = $(DESTDIR)/usr/share/man
 localedir = $(datarootdir)/locale
-libdir = $(exec_prefix)/lib
+libdir = $(exec_prefix)/lib64
 psdir = $(docdir)
 pdfdir = $(docdir)
 dvidir = $(docdir)
 htmldir = $(docdir)
-infodir = $(datarootdir)/info
+infodir = $(DESTDIR)/usr/share/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
 oldincludedir = $(DESTDIR)/usr/include
-includedir = $(prefix)/include
+includedir = $(DESTDIR)/usr/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(DESTDIR)/var
 sharedstatedir = $(DESTDIR)/var/lib
 sysconfdir = $(DESTDIR)/etc
-datadir = $(datarootdir)
+datadir = $(DESTDIR)/usr/share
 datarootdir = $(prefix)/share
-libexecdir = $(DESTDIR)/usr/lib/ruby
-sbindir = $(exec_prefix)/sbin
+libexecdir = $(DESTDIR)/usr/libexec
+sbindir = $(DESTDIR)/usr/sbin
 bindir = $(exec_prefix)/bin
 archdir = $(rubyarchdir)
 
@@ -84,14 +85,14 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
 cppflags = 
 CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS) -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DBUILD_FOR_RUBY -DOS_UNIX -D_FORTIFY_SOURCE=2 $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt $(ARCH_FLAG)
-ldflags  = -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic
-dldflags = -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -Wl,--compress-debug-sections=zlib 
-ARCH_FLAG = 
+CPPFLAGS = -DBUILD_FOR_RUBY -DOS_UNIX  $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection $(ARCH_FLAG)
+ldflags  = -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic
+dldflags = -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  
+ARCH_FLAG = -m64
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CXX) -shared
 LDSHAREDXX = $(CXX) -shared
@@ -101,7 +102,7 @@ EXEEXT =
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
 RUBY_SO_NAME = ruby
 RUBYW_INSTALL_NAME = 
-RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
+RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version_dir_name)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
@@ -125,8 +126,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir)
-LIBPATH =  -L. -L$(libdir)
+libpath = . $(archlibdir)
+LIBPATH =  -L. -L$(archlibdir)
 DEFFILE = 
 
 CLEANFILES = mkmf.log

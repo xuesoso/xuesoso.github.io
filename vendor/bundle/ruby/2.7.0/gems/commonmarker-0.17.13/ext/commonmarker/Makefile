@@ -2,7 +2,7 @@
 SHELL = /bin/sh
 
 # V=0 quiet, V=1 verbose.  other values don't work.
-V = 0
+V = 1
 Q1 = $(V:1=)
 Q = $(Q1:0=@)
 ECHO1 = $(V:1=@ :)
@@ -12,54 +12,55 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/include/ruby-2.7.0
+topdir = /usr/include
 hdrdir = $(topdir)
-arch_hdrdir = /usr/include/ruby-2.7.0/x86_64-linux
+arch_hdrdir = /usr/include
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/usr
-rubysitearchprefix = $(rubylibprefix)/$(sitearch)
-rubyarchprefix = $(rubylibprefix)/$(arch)
-rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
-exec_prefix = $(prefix)
-vendorarchhdrdir = $(vendorhdrdir)/$(sitearch)
-sitearchhdrdir = $(sitehdrdir)/$(sitearch)
-rubyarchhdrdir = $(rubyhdrdir)/$(arch)
+rubysitearchprefix = $(sitearchlibdir)/$(RUBY_BASE_NAME)
+rubyarchprefix = $(DESTDIR)/usr/lib64/ruby
+rubylibprefix = $(exec_prefix)/share/ruby
+exec_prefix = $(DESTDIR)/usr
+vendorarchhdrdir = $(vendorhdrdir)/$(arch)
+sitearchhdrdir = $(sitehdrdir)/$(arch)
+rubyarchhdrdir = $(DESTDIR)/usr/include
 vendorhdrdir = $(rubyhdrdir)/vendor_ruby
 sitehdrdir = $(rubyhdrdir)/site_ruby
-rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
-vendorarchdir = $(vendorlibdir)/$(sitearch)
-vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20200728-93777-g5rtdj
-sitelibdir = $(DESTDIR)./.gem.20200728-93777-g5rtdj
-sitedir = $(rubylibprefix)/site_ruby
-rubyarchdir = $(rubylibdir)/$(arch)
-rubylibdir = $(rubylibprefix)/$(ruby_version)
+rubyhdrdir = $(DESTDIR)/usr/include
+rubygemsdir = $(DESTDIR)/usr/share/rubygems
+vendorarchdir = $(DESTDIR)/usr/lib64/ruby/vendor_ruby
+vendorlibdir = $(vendordir)
+vendordir = $(DESTDIR)/usr/share/ruby/vendor_ruby
+sitearchdir = $(DESTDIR)./.gem.20211101-159243-ban97m
+sitelibdir = $(DESTDIR)./.gem.20211101-159243-ban97m
+sitedir = $(DESTDIR)/usr/local/share/ruby/site_ruby
+rubyarchdir = $(rubyarchprefix)
+rubylibdir = $(rubylibprefix)
 sitearchincludedir = $(includedir)/$(sitearch)
 archincludedir = $(includedir)/$(arch)
 sitearchlibdir = $(libdir)/$(sitearch)
-archlibdir = $(libdir)/$(arch)
+archlibdir = $(DESTDIR)/usr/lib64
 ridir = $(datarootdir)/$(RI_BASE_NAME)
-mandir = $(datarootdir)/man
+mandir = $(DESTDIR)/usr/share/man
 localedir = $(datarootdir)/locale
-libdir = $(exec_prefix)/lib
+libdir = $(exec_prefix)/lib64
 psdir = $(docdir)
 pdfdir = $(docdir)
 dvidir = $(docdir)
 htmldir = $(docdir)
-infodir = $(datarootdir)/info
+infodir = $(DESTDIR)/usr/share/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
 oldincludedir = $(DESTDIR)/usr/include
-includedir = $(prefix)/include
+includedir = $(DESTDIR)/usr/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(DESTDIR)/var
 sharedstatedir = $(DESTDIR)/var/lib
 sysconfdir = $(DESTDIR)/etc
-datadir = $(datarootdir)
+datadir = $(DESTDIR)/usr/share
 datarootdir = $(prefix)/share
-libexecdir = $(DESTDIR)/usr/lib/ruby
-sbindir = $(exec_prefix)/sbin
+libexecdir = $(DESTDIR)/usr/libexec
+sbindir = $(DESTDIR)/usr/sbin
 bindir = $(exec_prefix)/bin
 archdir = $(rubyarchdir)
 
@@ -84,14 +85,14 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
 cppflags = 
 CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC -std=c99 $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS) -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -std=c99 $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS =  -D_FORTIFY_SOURCE=2 $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) -march=x86-64 -mtune=generic -O2 -pipe -fno-plt $(ARCH_FLAG)
-ldflags  = -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic
-dldflags = -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -Wl,--compress-debug-sections=zlib 
-ARCH_FLAG = 
+CPPFLAGS =   $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection $(ARCH_FLAG)
+ldflags  = -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic
+dldflags = -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  
+ARCH_FLAG = -m64
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -shared
 LDSHAREDXX = $(CXX) -shared
@@ -101,7 +102,7 @@ EXEEXT =
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
 RUBY_SO_NAME = ruby
 RUBYW_INSTALL_NAME = 
-RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
+RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version_dir_name)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
@@ -125,8 +126,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir)
-LIBPATH =  -L. -L$(libdir)
+libpath = . $(archlibdir)
+LIBPATH =  -L. -L$(archlibdir)
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -141,7 +142,7 @@ LIBS = $(LIBRUBYARG_SHARED)  -lm   -lc
 ORIG_SRCS = arena.c autolink.c blocks.c buffer.c cmark.c cmark_ctype.c commonmark.c commonmarker.c core-extensions.c ext_scanners.c footnotes.c houdini_href_e.c houdini_html_e.c houdini_html_u.c html.c inlines.c iterator.c latex.c linked_list.c man.c map.c node.c plaintext.c plugin.c references.c registry.c render.c scanners.c strikethrough.c syntax_extension.c table.c tagfilter.c utf8.c xml.c
 SRCS = $(ORIG_SRCS) 
 OBJS = arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o utf8.o xml.o
-HDRS = $(srcdir)/map.h $(srcdir)/autolink.h $(srcdir)/cmark-gfm_export.h $(srcdir)/cmark_ctype.h $(srcdir)/scanners.h $(srcdir)/tagfilter.h $(srcdir)/ext_scanners.h $(srcdir)/node.h $(srcdir)/strikethrough.h $(srcdir)/config.h $(srcdir)/houdini.h $(srcdir)/registry.h $(srcdir)/syntax_extension.h $(srcdir)/plugin.h $(srcdir)/html.h $(srcdir)/cmark-gfm.h $(srcdir)/table.h $(srcdir)/footnotes.h $(srcdir)/parser.h $(srcdir)/inlines.h $(srcdir)/cmark-gfm-extensions_export.h $(srcdir)/references.h $(srcdir)/commonmarker.h $(srcdir)/iterator.h $(srcdir)/cmark-gfm_version.h $(srcdir)/utf8.h $(srcdir)/buffer.h $(srcdir)/cmark-gfm-core-extensions.h $(srcdir)/cmark-gfm-extension_api.h $(srcdir)/chunk.h $(srcdir)/render.h
+HDRS = $(srcdir)/inlines.h $(srcdir)/config.h $(srcdir)/cmark-gfm_version.h $(srcdir)/strikethrough.h $(srcdir)/html.h $(srcdir)/registry.h $(srcdir)/houdini.h $(srcdir)/footnotes.h $(srcdir)/commonmarker.h $(srcdir)/cmark-gfm-extension_api.h $(srcdir)/iterator.h $(srcdir)/references.h $(srcdir)/map.h $(srcdir)/parser.h $(srcdir)/table.h $(srcdir)/scanners.h $(srcdir)/utf8.h $(srcdir)/syntax_extension.h $(srcdir)/plugin.h $(srcdir)/tagfilter.h $(srcdir)/cmark_ctype.h $(srcdir)/autolink.h $(srcdir)/render.h $(srcdir)/cmark-gfm-extensions_export.h $(srcdir)/cmark-gfm-core-extensions.h $(srcdir)/buffer.h $(srcdir)/cmark-gfm.h $(srcdir)/ext_scanners.h $(srcdir)/node.h $(srcdir)/cmark-gfm_export.h $(srcdir)/chunk.h
 LOCAL_HDRS = 
 TARGET = commonmarker
 TARGET_NAME = commonmarker

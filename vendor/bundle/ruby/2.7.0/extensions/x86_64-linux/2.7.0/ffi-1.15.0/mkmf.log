@@ -1,7 +1,7 @@
 "pkg-config --exists libffi"
 | pkg-config --libs libffi
-=> "-L/usr/lib/../lib -lffi \n"
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby  -lm   -lc"
+=> "-lffi \n"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -12,7 +12,7 @@ checked program was:
 6: }
 /* end */
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby -L/usr/lib/../lib -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic  -m64   -lruby -lffi -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -32,12 +32,12 @@ checked program was:
 package configuration for libffi
 incflags: 
 cflags: 
-ldflags: -L/usr/lib/../lib
+ldflags: 
 libs: -lffi
 
 have_library: checking for ffi_prep_closure_loc() in -lffi... -------------------- yes
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib     -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64   -lffi -lruby -lffi  -lffi -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -62,7 +62,7 @@ checked program was:
 
 have_func: checking for ffi_prep_cif_var()... -------------------- yes
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘ffi_prep_cif_var’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_cif_var; return !p; }
@@ -86,7 +86,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_cif_var; return !p; }
 /* end */
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -110,7 +110,7 @@ checked program was:
 
 have_func: checking for ffi_raw_call()... -------------------- yes
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘ffi_raw_call’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
@@ -134,7 +134,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
 /* end */
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -158,7 +158,7 @@ checked program was:
 
 have_func: checking for ffi_prep_raw_closure()... -------------------- yes
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘ffi_prep_raw_closure’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_raw_closure; return !p; }
@@ -182,7 +182,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_raw_closure; return !p; }
 /* end */
 
-"gcc -o conftest -I/usr/include/ruby-2.7.0/x86_64-linux -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I.  -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/usr/lib/../lib    -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.     -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC  conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic   -m64  -lffi  -lffi -lruby -lffi  -lffi -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"

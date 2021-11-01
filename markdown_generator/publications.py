@@ -27,7 +27,7 @@
 
 import pandas as pd
 import numpy as np
-import os, glob
+import os, glob, shutil
 
 
 # ## Import TSV
@@ -38,6 +38,9 @@ import os, glob
 
 # In[3]:
 
+if os.path.isdir('../_publications'):
+    shutil.rmtree('../_publications')
+    os.mkdir('../_publications')
 
 publications = pd.read_csv("publications.csv", sep=",", header=0)
 myname = 'Yuan Xue'
