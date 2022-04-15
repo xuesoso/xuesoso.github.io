@@ -26,4 +26,5 @@ group :jekyll_plugins do
   # gem 'hawkins'
   # gem "activesupport", ">= 6.0.3.1"
   gem "kramdown", ">= 2.3.1"
+  gem "Nokogiri", ">= 1.13.4"
 end
