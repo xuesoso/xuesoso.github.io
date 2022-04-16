@@ -82,12 +82,13 @@ analytics:
 author:
   name             : "Yuan Xue (Soso)"
   avatar           : "yuanxue_cropped.jpg"
-  bio              : "single-cell data science
-                      + infectious disease
+  bio              : "data science
                       + genomics
+                      + non-invasive cancer detection
+                      + scRNA-seq
                       + unix
                       + vim"
-  location         : "Palo Alto, California"
+  location         : "San Francisco, California"
   employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=HJLgA2kAAAAJ&hl=en"
