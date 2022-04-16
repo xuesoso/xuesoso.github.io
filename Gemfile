@@ -20,11 +20,9 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  # gem "jekyll-archives"
   gem "jekyll-feed"
   gem "jekyll-sitemap"
-  # gem 'hawkins'
-  # gem "activesupport", ">= 6.0.3.1"
   gem "kramdown", ">= 2.3.1"
   gem "pkg-config"
+  gem "commonmarker", ">= 0.23.4"
 end
