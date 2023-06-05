@@ -277,6 +277,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  arm64-darwin-22
   universal-darwin-21
   x86_64-linux
 
@@ -289,4 +290,4 @@ DEPENDENCIES
   pkg-config
 
 BUNDLED WITH
-   2.2.30
+   2.4.12
