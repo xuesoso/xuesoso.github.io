@@ -127,31 +127,7 @@ for row, item in publications.iterrows():
     if len(split_paper_url) > 1:
         md += "\n[Preprint available here](" + split_paper_url[-1] + ")\n"
 
-
-#     md += "\nRecommended citation: " + item.citation
-
     md_filename = os.path.basename(md_filename)
 
     with open("../_publications/" + md_filename, 'w') as f:
         f.write(md)
-
-
-# These files are in the publications directory, one directory below where we're working from.
-
-# In[6]:
-
-
-# get_ipython().system('ls ../_publications/')
-
-
-# In[7]:
-
-
-# get_ipython().system('cat ../_publications/2009-10-01-paper-title-number-1.md')
-
-
-# In[ ]:
-
-
-
-

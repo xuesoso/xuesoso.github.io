@@ -27,11 +27,7 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+        <a href="{{ post.paperurl }}" rel="permalink">{{ title }}</a>
     </h2>
     
     {% if post.read_time %}
@@ -41,7 +37,7 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.year | default: "1900" | year: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-        <p>Available on <a href=" {{ post.paperurl }} "><u><i>{{ post.venue }}</i>, <i>{{ post.year | default: "1900" | year: "%Y" }}</i></u></a></p>
+        <b><i>{{ post.venue }}</i>, <i>{{ post.year | default: "1900" | year: "%Y" }}</i></b>
 
         {% elsif post.year %}
          <p class="page__year"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].year_label | default: "Published:" }}</strong> <time yeartime="{{ post.year | default: "1900-01-01" | year_to_xmlschema }}">{{ post.year | default: "1900" | year: "%Y" }}</time></p>
@@ -52,18 +48,12 @@
     {% endif %}
     
     {% if post.citation and post.paperurl %}
-      <p>{{ post.citation }} </p>
+    <p>{{ post.citation }} </p>
     {% elsif post.citation %}
-      <p>{{ post.citation }} </p>
-    {% elsif post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+    <p>{{ post.citation }} </p>
     {% endif %}
 
     {% if post.image %}
-        <!-- <div class="figure"> -->
-            <!-- [> <iframe src="/images/publications/{{ post.image }}" max-height="100%" max-width="100%" scrolling="no" frameborder="0"> <] -->
-            <!-- </iframe> -->
-        <!-- </div> -->
         <div style="height: 250px">
              <img src="/images/publications/{{ post.image }}" alt=" " style="max-width: 100%;max-height: 100%" />
         </div>
