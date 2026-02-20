@@ -158,6 +158,16 @@ section:last-of-type {
 
 .social-links a {
   font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 /* ===== Research Section ===== */
@@ -304,6 +314,18 @@ section:last-of-type {
   .about-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  .about-grid > div {
+    text-align: left;
+    width: 100%;
+  }
+
+  .about-name {
+    text-align: center;
+  }
+
+  .about-title {
     text-align: center;
   }
 
@@ -340,5 +362,10 @@ section:last-of-type {
 
   section {
     padding: 2rem 0;
+  }
+
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 85vh;
   }
 }
