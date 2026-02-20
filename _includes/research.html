@@ -1,0 +1,62 @@
+<section id="research">
+  <h2 class="section-title">Research projects</h2>
+  <div class="research-list">
+    {% for item in site.data.research %}
+    <article class="research-item">
+      {% if item.image %}
+        <img class="research-thumb" src="{{ item.image | relative_url }}" alt="{{ item.title }}" onclick="openLightbox(this)">
+      {% endif %}
+      <div{% unless item.image %} style="grid-column: 1 / -1"{% endunless %}>
+        <h3 class="research-title">{{ item.title }}</h3>
+        <p class="research-summary">{{ item.summary }}</p>
+        <p class="research-citation">
+          <span class="research-authors">{{ item.authors }}</span>
+          <span class="research-venue">{{ item.venue }}.</span>
+        </p>
+        {% if item.tags %}
+        <div class="research-tags">
+          {% for tag in item.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="research-links">
+          {% if item.pdf %}
+            <a href="{{ item.pdf }}">[PDF]</a>
+          {% endif %}
+          {% if item.biorxiv %}
+            <a href="{{ item.biorxiv }}">[bioRxiv]</a>
+          {% endif %}
+          {% if item.code %}
+            <a href="{{ item.code }}">[Code]</a>
+          {% endif %}
+          {% if item.project %}
+            <a href="{{ item.project }}">[Project]</a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Lightbox overlay for enlarging images -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(img) {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightbox.classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>

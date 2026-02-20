@@ -1,0 +1,40 @@
+<section id="about">
+  <div class="about-grid">
+    <img
+      class="profile-photo"
+      src="{{ '/assets/images/profile.jpg' | relative_url }}"
+      alt="Photo of {{ site.author.name }}"
+      onerror="this.style.display='none'"
+    >
+    <div>
+      <h1 class="about-name">{{ site.author.name }}</h1>
+      <p class="about-title">{{ site.author.title }}, {{ site.author.affiliation }}</p>
+      <div class="about-bio">
+        <p>I am a senior bioinformatics data scientist at <a href="https://www.clearnotehealth.com/">ClearNote Health</a>, specializing in the computational research of cfDNA fragmentomics for cancer detection.</p>
+        <br>
+        <p>I received my Ph.D. in Bioengineering from Stanford University, co-advised by <a href="https://quakelab.stanford.edu/">Dr. Stephen Quake</a> and <a href="https://med.stanford.edu/boothroydlab/lab-members/john-boothroyd.html">Dr. John Boothroyd</a>. My dissertation focused on developing and applying single-cell transcriptomic methods to study host-pathogen interactions. I characterized the intracellular life cycle of <em>Toxoplasma gondii</em> and discovered novel antigenic variation mechanisms (published in <em>eLife</em>), led computational analysis of macrophage responses to persistent <em>Salmonella Typhimurium</em> infection (published in <em>Science Advances</em>), and profiled DNA polymerase fidelity across broad evolutionary origins (published in <em>Journal of Biological Chemistry</em>). For more details on my research, please see my <a href="#research">research projects</a>.</p>
+        <p>If you are interested in connecting, please feel free to reach out to <a href="mailto:xuesoso@gmail.com">my email</a>.</p>
+      </div>
+      <ul class="social-links">
+        {% if site.author.email %}
+          <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+        {% endif %}
+        {% if site.author.google_scholar != "" %}
+          <li><a href="{{ site.author.google_scholar }}">Google Scholar</a></li>
+        {% endif %}
+        {% if site.author.github != "" %}
+          <li><a href="{{ site.author.github }}">GitHub</a></li>
+        {% endif %}
+        {% if site.author.twitter != "" %}
+          <li><a href="{{ site.author.twitter }}">Twitter</a></li>
+        {% endif %}
+        {% if site.author.linkedin != "" %}
+          <li><a href="{{ site.author.linkedin }}">LinkedIn</a></li>
+        {% endif %}
+        {% if site.author.orcid != "" %}
+          <li><a href="{{ site.author.orcid }}">ORCID</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</section>

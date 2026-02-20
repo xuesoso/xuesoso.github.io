@@ -1,0 +1,28 @@
+title: "Yuan Xue"
+description: "Academic personal webpage"
+url: "xuesoso.github.io" # Set to your GitHub Pages URL, e.g. https://username.github.io
+baseurl: "" # Set to repo name if not using user site, e.g. /repo-name
+theme: null
+
+author:
+  name: "Yuan Xue"
+  title: "Senior Bioinformatics Data Scientist"
+  affiliation: "ClearNote Health"
+  email: "xuesoso@gmail.com"
+  google_scholar: "https://scholar.google.com/citations?user=HJLgA2kAAAAJ&hl"
+  github: "https://github.com/xuesoso"
+  twitter: ""
+  linkedin: ""
+  orcid: ""
+
+cv_pdf: "assets/files/cv.pdf"
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

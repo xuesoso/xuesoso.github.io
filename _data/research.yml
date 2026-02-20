@@ -1,0 +1,99 @@
+- title: "5hmC Signatures Enable Pan-Cancer Detection in Liquid Biopsies"
+  summary: "Can stable epigenomic marks in tumors be read from a blood draw? We profiled 5hmC across tumor tissues and cell-free DNA in five cancer types to ask whether hydroxymethylation signatures can detect cancer and pinpoint its tissue of origin."
+  authors: "<strong>Yuan Xue</strong>*, Yuhong Ning*, Verena Friedl, David Haan, Anna Bergamaschi, Gulfem D. Guler, Kyle Hazen, Aaron Scott, Tierney Phillips, Erin McCarthy, Christopher K. Ellison, Roger Malta, Albert Nguyen, Vanessa Lopez, Romola Cavet, Melissa Peters, Judith Sheard, William Gibb, Shimul Chowdhury, Wayne Volkmuth, Samuel Levy."
+  venue: "Communications Biology, 2025"
+  image: "assets/images/research/2025_CommBio_YX_YH.png"
+  pdf: "https://www.nature.com/articles/s42003-025-09017-4"
+  code: "https://github.com/ClearNoteHealth-OpenAccess/ClearNoteHealth_TOTO_nature_comm_bio_analysis_code"
+  tags: ["cfDNA", "Epigenomics", "Cancer Detection"]
+
+- title: "Cross-Species Wound Responses in a Regenerative Holobiont"
+  summary: "When a photosymbiotic animal is wounded, does its algal partner respond too? We use single-cell transcriptomics to explore how a regenerative acoel and its intracellular algae coordinate molecular responses to injury across species boundaries."
+  authors: "Dania Nanes Sarfati, <strong>Yuan Xue</strong>, Eun Sun Song, Ashley Byrne, Daniel Le, Spyros Darmanis, Stephen R. Quake, Adrien Burlacot, James Sikes, Bo Wang."
+  venue: "Nature Communications, 2024"
+  image: "assets/images/research/2024_NComm_DNS.png"
+  pdf: "https://www.nature.com/articles/s41467-024-48366-2"
+  code: "https://github.com/xuesoso/acoel_reference_assembly"
+  tags: ["scRNA-seq", "Regeneration", "Symbiosis"]
+
+- title: "ACE+ Granuloma Macrophages Resist Bacterial Persistence"
+  summary: "Macrophages can both fight and harbor <em>Salmonella</em>, so what tips the balance? We use single-cell transcriptomics to dissect macrophage diversity within granulomas during persistent infection and identify a subpopulation that resists becoming a bacterial reservoir."
+  authors: "Trung M. Pham*, <strong>Yuan Xue</strong>*, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake, Denise M. Monack."
+  venue: "Science Advances, 2023"
+  image: "assets/images/research/2023_ScienceAdvances_TP_YX.png"
+  pdf: "https://www.science.org/doi/10.1126/sciadv.add4333"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/2022.07.21.501041v1"
+  code: "https://github.com/xuesoso/2022_ACE_Granuloma_Macrophage"
+  tags: ["scRNA-seq", "Host-Pathogen", "Immunology"]
+
+- title: "How Temperature Shapes DNA Polymerase Fidelity"
+  summary: "Temperature is a fundamental parameter of every polymerase reaction, yet how it affects error rates across thermally adapted enzymes is underexplored. We profile fidelity at single-molecule resolution for polymerases from psychrophilic to thermophilic origins, and find one that works below the freezing point of water."
+  authors: "<strong>Yuan Xue</strong>, Ido Braslavsky, Stephen R. Quake."
+  venue: "Journal of Biological Chemistry, 2021"
+  image: "assets/images/research/2020_Polymerase_YX.png"
+  pdf: "https://www.jbc.org/article/S0021-9258(21)01073-5/fulltext"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/2020.08.04.236919v2"
+  tags: ["Biochemistry", "DNA Replication", "Genomics"]
+
+- title: "A Germline Stem Cell Circuit Conserved Across Flatworms"
+  summary: "What decides whether a parasite germline stem cell self-renews or differentiates into gametes? We apply single-cell RNA sequencing to <em>Schistosoma mansoni</em> during gonad development to uncover the regulatory circuit at this crossroad and trace how it has been repurposed across flatworm evolution."
+  authors: "Pengyang Li, Dania Nanes Sarfati*, <strong>Yuan Xue</strong>*, Xi Yu, Alexander Joel Tarashansky, Stephen R. Quake, Bo Wang."
+  venue: "Nature Communications, 2021"
+  image: "assets/images/research/2021_NComm_PL.png"
+  pdf: "https://www.nature.com/articles/s41467-020-20794-w"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/2020.07.06.190033v1"
+  tags: ["scRNA-seq", "Parasitology", "Stem Cells"]
+
+- title: "Disentangling How <em>Toxoplasma</em> Effectors Hijack Host Cells"
+  summary: "<em>Toxoplasma</em> injects effector proteins into host cells even when invasion fails. We exploit these \"uninfected-injected\" cells and single-cell transcriptomics to tease apart the individual contributions of ROP and GRA effectors to host gene expression in the earliest hours of infection."
+  authors: "Suchita Rastogi, <strong>Yuan Xue</strong>, Stephen R. Quake, John C. Boothroyd."
+  venue: "mBio, 2020"
+  image: "assets/images/research/2020_mBio_SR.png"
+  pdf: "https://mbio.asm.org/content/11/3/e00182-20"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/2020.02.04.934570v2"
+  tags: ["scRNA-seq", "Host-Pathogen", "Toxoplasma"]
+
+- title: "A Single-Cell Atlas of <em>Toxoplasma</em> Development"
+  summary: "How does <em>Toxoplasma gondii</em> navigate its complex asexual life cycle, and why do individual parasites display such varied surface antigen profiles? We built a single-parasite transcriptional atlas across multiple strains and developmental stages to map hidden states, identify regulators of antigenic switching, and compare programs with the malaria parasite."
+  authors: "<strong>Yuan Xue</strong>, Terence T. Theisen, Suchita Rastogi, Abel Ferrel, Stephen R. Quake, John C. Boothroyd."
+  venue: "eLife, 2020"
+  image: "assets/images/research/2020_eLife_YX.png"
+  pdf: "https://elifesciences.org/articles/54129"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/656165v2"
+  code: "https://github.com/xuesoso/singleToxoplasmaSeq"
+  tags: ["scRNA-seq", "Parasitology", "Toxoplasma"]
+
+- title: "Self-Assembling Manifolds for Single-Cell Analysis"
+  summary: "When biologically meaningful differences between cells are subtle, how do you separate signal from noise? SAM uses iterative soft feature selection to automatically rescale feature for superior manifold learning, validated by discovering novel stem cell populations in <em>Schistosoma mansoni</em> and benchmarked across 56 datasets."
+  authors: "Alexander J. Tarashansky, <strong>Yuan Xue</strong>, Pengyang Li, Stephen R. Quake, Bo Wang."
+  venue: "eLife, 2019"
+  image: "assets/images/research/2020_eLife_AT.png"
+  pdf: "https://elifesciences.org/articles/48994"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/364166v2"
+  code: "https://github.com/atarashansky/self-assembling-manifold"
+  tags: ["scRNA-seq", "Algorithm", "Computational Biology"]
+
+- title: "Tabula Muris: A Cell Atlas of the Mouse"
+  summary: "Contributed to the Tabula Muris consortium effort generating single-cell transcriptomic profiles of over 100,000 cells across 20 mouse organs, creating a foundational whole-organism cell atlas."
+  authors: "The Tabula Muris Consortium, Stephen R. Quake, Tony Wyss-Coray, Spyros Darmanis."
+  venue: "Nature, 2018"
+  image: "assets/images/research/2018_Nature_TabulaMuris.png"
+  pdf: "https://www.nature.com/articles/s41586-018-0590-4"
+  biorxiv: "https://www.biorxiv.org/content/10.1101/237446v2"
+  code: "https://github.com/czbiohub-sf/tabula-muris"
+  tags: ["scRNA-seq", "Cell Atlas", "Mouse"]
+
+- title: "How Zinc Supplements Disarm Pathogenic <em>E. coli</em>"
+  summary: "Zinc supplements can treat infantile diarrhea, but how? We show that micromolar zinc triggers envelope stress in enteropathogenic <em>E. coli</em>, activating the alternate sigma factor RpoE, which in turn suppresses virulence gene expression through multiple mechanisms."
+  authors: "<strong>Yuan Xue</strong>, Jossef Osborn, Anand Panchal, Jay L. Mellies."
+  venue: "Applied and Environmental Microbiology, 2015"
+  image: "assets/images/research/2015_AEM_YX.png"
+  pdf: "https://aem.asm.org/content/81/11/3766/article-info"
+  tags: ["Microbiology", "Pathogens", "Gene Regulation"]
+
+- title: "How Autophagy Switches On Its Own Degradation Machinery"
+  summary: "Lysosomes execute autophagy, but does the autophagic process itself regulate lysosomal function? We dissect a dual activation mechanism involving mTORC1 suppression and autophagosome-lysosome fusion that upregulates lysosomal activity during autophagy."
+  authors: "Jing Zhou, Shi-Hao Tan, Valerie Nicolas, Chantal Bauvy, Nai-Di Yang, Jianbin Zhang, <strong>Yuan Xue</strong>, Patrice Codogno, Han-Ming Shen."
+  venue: "Cell Research, 2013"
+  pdf: "https://www.nature.com/articles/cr201311"
+  tags: ["Cell Biology", "Autophagy"]

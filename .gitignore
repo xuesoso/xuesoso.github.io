@@ -1,0 +1,26 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor/office lock files
+*.lock~
+.~lock.*#
+
+# Jupyter
+markdown_generator/.ipynb_checkpoints/
+
+# Misc
+_backup_index.html

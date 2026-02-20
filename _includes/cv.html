@@ -1,0 +1,11 @@
+<section id="cv">
+  <h2 class="section-title">Curriculum Vitae</h2>
+  <ul class="cv-highlights">
+    <li>Senior Bioinformatics Data Scientist, ClearNote Health (2022 &ndash; Present)</li>
+    <li>Ph.D. &amp; M.S. in Bioengineering, Stanford University (2015 &ndash; 2021)</li>
+    <li>B.A. in Biology, Reed College (2010 &ndash; 2014)</li>
+  </ul>
+  {% if site.cv_pdf %}
+    <a class="btn" href="{{ site.cv_pdf | relative_url }}">Download Full CV (PDF)</a>
+  {% endif %}
+</section>
